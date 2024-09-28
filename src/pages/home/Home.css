@@ -1,0 +1,19 @@
+.logo-home-image {
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+  & img {
+  z-index: 0;
+    width: 100%;
+  }
+}
+
+.asterisk-message {
+  position: absolute;
+  right: 0;
+}
+
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+}

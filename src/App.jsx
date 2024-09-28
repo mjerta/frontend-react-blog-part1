@@ -19,10 +19,8 @@ function App() {
           <Route path={"/"} element={<Home/>}/>
           <Route path={"/newpost"} element={<NewPost/>}/>
           <Route path={"/overview"} element={<OverView/>}/>
-          <Route path={"/404"} element={<NotFound/>}/>
           <Route path={"/posts/:id"} element={<Post/>}/>
-          {/*  <img src={logo} alt="Company logo"/>*/}
-          {/*  <h1>Begin hier met het maken van jouw blog-applicatie!</h1>*/}
+          <Route path={"*"} element={<NotFound/>}/>
         </Routes>
       </div>
     </>
