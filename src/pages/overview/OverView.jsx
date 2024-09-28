@@ -5,7 +5,7 @@ import "./OverView.css";
 function OverView() {
   return (
     <>
-      <h1>Over View</h1>
+      <h1>Bekijk alle {blogs.length} posts op het platform</h1>
       <div className="overview">
         {
           blogs.map(blog => (
@@ -16,6 +16,7 @@ function OverView() {
                 author={blog.author}
                 comments={blog.comments}
                 shares={blog.shares}
+                id={blog.id}
               />
             )
           )

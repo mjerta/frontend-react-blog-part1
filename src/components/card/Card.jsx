@@ -1,15 +1,20 @@
 import React from 'react';
+import {Link, Navigate} from "react-router-dom";
+import UserFeedBack from "../userfeedback/UserFeedBack.jsx";
 
-function Card({comments, title, shares, author, className}) {
+function Card({comments, title, shares, author, className, id}) {
   return (
-    <article className={className}>
+    <article onClick={() => <Navigate to={"/"}/>} className={className}>
       <header>
-        <h2>{title}</h2>
+        <Link to={`/posts/${id}`}>
+          <h3>{title}</h3>
+        </Link>
         <p>(by {author})</p>
       </header>
-      <footer>
-        <p>{comments} reacties</p><span>-</span> <p>{shares} keer gedeeld</p>
-      </footer>
+      <UserFeedBack
+        comments={comments}
+        shares={shares}
+      />
     </article>
   )
 }

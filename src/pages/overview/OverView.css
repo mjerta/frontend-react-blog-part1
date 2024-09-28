@@ -19,6 +19,12 @@
     flex-wrap: wrap;
     align-items: center;
     column-gap: .5rem;
+
+
+    & a {
+
+      text-decoration: none;
+    }
   }
 
   & footer {
@@ -30,7 +36,7 @@
     margin: 0 .2rem
   }
 
-  & h2 {
+  & h3 {
     color: #38e790;
   }
 }

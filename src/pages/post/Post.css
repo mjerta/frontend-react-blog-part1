@@ -1,0 +1,22 @@
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+
+  small {
+    display: flex;
+    align-items: center;
+    gap:.3rem;
+    font-style: italic;
+
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.backlink {
+  color: #38e790;
+  font-weight: bold;
+}

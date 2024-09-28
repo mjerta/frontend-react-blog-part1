@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound.jsx";
 import OverView from "./pages/overview/OverView.jsx";
 import Navigation from "./components/navigation/Navigation.jsx";
 import logoNavbar from "./assets/logo-medium.png";
-import Post from "./pages/Post.jsx";
+import Post from "./pages/post/Post.jsx";
 
 function App() {
   return (
