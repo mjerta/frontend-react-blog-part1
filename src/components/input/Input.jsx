@@ -1,4 +1,3 @@
-import React from 'react';
 import ErrorOuput from "../erroroutput/ErrorOuput.jsx";
 
 function Input({labelText, id, register, name, requiredNeeded, errors, errorMessage}) {

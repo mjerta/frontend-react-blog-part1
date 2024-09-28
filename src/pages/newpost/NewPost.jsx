@@ -1,11 +1,11 @@
-import React, {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useForm} from "react-hook-form";
 import "./NewPost.css"
 import Button from "../../components/button/Button.jsx";
 import TextArea from "../../components/textarea/TextArea.jsx";
 import Input from "../../components/input/Input.jsx";
 import calculateTime from "../../helpers/calculateTime.js";
-import {Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function NewPost() {
 

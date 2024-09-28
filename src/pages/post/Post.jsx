@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faClock, faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import UserFeedBack from "../../components/userfeedback/UserFeedBack.jsx";
 import "./Post.css"
-import converDate from "../../helpers/converDate.js";
+import convertDate from "../../helpers/converDate.js";
 
 function Post() {
   const {id} = useParams();
@@ -15,7 +15,7 @@ function Post() {
     <article className={"blog-post"}>
       <h1>{blog.title}</h1>
       <h4>{blog.subtitle}</h4>
-      <p>Geschreven door {blog.author} op {converDate(blog.created)}</p>
+      <p>Geschreven door {blog.author} op {convertDate(blog.created)}</p>
       <small>
         <FontAwesomeIcon
           className={"clock-svg"}

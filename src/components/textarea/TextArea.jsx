@@ -1,4 +1,3 @@
-import React from 'react';
 import ErrorOuput from "../erroroutput/ErrorOuput.jsx";
 
 function TextArea({
