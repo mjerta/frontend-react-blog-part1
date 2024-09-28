@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound.jsx";
 import OverView from "./pages/OverView.jsx";
 import Navigation from "./components/Navigation.jsx";
 import logoNavbar from "./assets/logo-medium.png";
+import Post from "./pages/Post.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path={"/newpost"} element={<NewPost/>}/>
         <Route path={"/overview"} element={<OverView/>}/>
         <Route path={"/404"} element={<NotFound/>}/>
+        <Route path={"/posts/:id"} element={<Post/>}/>
         {/*<div className="page-container">*/}
         {/*  <img src={logo} alt="Company logo"/>*/}
         {/*  <h1>Begin hier met het maken van jouw blog-applicatie!</h1>*/}
