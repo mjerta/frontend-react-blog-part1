@@ -16,7 +16,7 @@ function OverView() {
                 author={blog.author}
                 comments={blog.comments}
                 shares={blog.shares}
-                id={blog.id}
+                id={blog.id -  1}
               />
             )
           )

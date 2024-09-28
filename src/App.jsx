@@ -1,9 +1,9 @@
 import './App.css'
 import logo from './assets/logo-white.png'
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import NewPost from "./pages/NewPost.jsx";
-import NotFound from "./pages/NotFound.jsx";
+import Home from "./pages/home/Home.jsx";
+import NewPost from "./pages/newpost/NewPost.jsx";
+import NotFound from "./pages/notfound/NotFound.jsx";
 import OverView from "./pages/overview/OverView.jsx";
 import Navigation from "./components/navigation/Navigation.jsx";
 import logoNavbar from "./assets/logo-medium.png";
