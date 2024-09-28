@@ -1,16 +1,158 @@
 .page-container {
-    width: 100%;
-    height: 100vh;
-    color: white;
-    background: rgb(44,47,57);
-    /*Wil jij ook zo'n coole gradient maken? Deze is gemaakt via https://cssgradient.io/ - kind kan de was doen!*/
-    background: linear-gradient(37deg, rgba(44,47,57,1) 0%, rgba(0,0,0,1) 8%, rgba(80,83,92,1) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: rgb(44, 47, 57);
+  /*Wil jij ook zo'n coole gradient maken? Deze is gemaakt via https://cssgradient.io/ - kind kan de was doen!*/
+  background: linear-gradient(37deg, rgba(44, 47, 57, 1) 0%, rgba(0, 0, 0, 1) 8%, rgba(80, 83, 92, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .page-container img {
-    width: 500px;
+  width: 500px;
+}
+
+.container {
+  padding: 0 1rem;
+  background-color: #e6e7eb;
+  flex-grow: 1;
+}
+
+
+/* Nav*/
+
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #2d2f39;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  & ul {
+    flex-direction: column;
+  }
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: green;
+}
+
+.nav-container {
+
+  ul {
+    display: none;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2d2f39;
+  }
+
+  .show-menu {
+    opacity: 1;
+    display: flex;
+  }
+}
+
+.default-menu-link {
+  border: none;
+}
+
+.active-menu-link {
+  border-bottom: 2px solid green;
+}
+
+.logo {
+  display: flex;
+  padding: 1rem;
+  color: #fff;
+  align-items: center;
+}
+
+.logo-img {
+  height: 1.5rem;
+}
+
+.hamburger {
+  display: flex; /* Initially hidden for larger screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    & ul {
+      flex-direction: row;
+      display: flex;
+      opacity: 1;
+      height: unset;
+      width: unset;
+      position: unset;
+      left: unset;
+      top: unset;
+      list-style-type: none;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2d2f39;
+      column-gap: 3rem;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 1rem;
+  }
+
+
 }

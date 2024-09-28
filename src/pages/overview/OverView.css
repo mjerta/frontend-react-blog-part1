@@ -1,0 +1,36 @@
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.overview-card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-basis: 50rem;
+  border-radius: .3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  & header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: .5rem;
+  }
+
+  & footer {
+    display: flex;
+    align-items: center;
+  }
+
+  & span {
+    margin: 0 .2rem
+  }
+
+  & h2 {
+    color: #38e790;
+  }
+}
