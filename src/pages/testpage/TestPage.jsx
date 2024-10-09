@@ -10,14 +10,12 @@ function TestPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function fetchApi(param) {
+  async function fetchApi(fetchType, configOrData) {
+    console.log(fetchType)
     try {
       setLoading(true);
-      console.log(param)
 
-      const fetchData = await axios.get(url, {
-        params: { id: param }
-      });
+      const fetchData = await axios[fetchType](url, configOrData)
       console.log(fetchData.data);
     } catch (ex) {
       console.error(ex.message)
@@ -32,12 +30,26 @@ function TestPage() {
       <Button
         buttonText={"test API"}
         className={"default-variant"}
-        onClick={() => fetchApi()}
+        onClick={() => fetchApi("get")}
       />
       <Button
         buttonText={"POST 6"}
         className={"default-variant"}
-        onClick={() => fetchApi(6)}
+        onClick={() => fetchApi("get", {param: {id: 6}})}
+      />
+      <Button
+        buttonText={"NEW POST"}
+        className={"default-variant"}
+        onClick={() => fetchApi("post", {
+          "title": "Wat gebruiker heeft ingevuld",
+          "subtitle": "Wat gebruiker heeft ingevuld",
+          "content": "Wat gebruiker heeft ingevuld, in dit geval minder dan 100 woorden",
+          "author": "Voornaam achternaam",
+          "created": "2023-09-21T09:30:00Z",
+          "readTime": 1,
+          "comments": 0,
+          "shares": 0
+        })}
       />
     </main>
   )
