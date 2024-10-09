@@ -1,0 +1,41 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  /*row-gap: 1rem;*/
+  margin: 0 auto;
+
+  & label {
+    display: flex;
+    flex-direction: column;
+    row-gap: .4rem;
+
+    & span:first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  input, textarea {
+    border:none;
+    border-radius: 0.3rem;
+    padding:1rem;
+
+    outline: none;
+  }
+}
+
+.error-message {
+  flex-basis: 1.5rem;
+  color: red;
+}
+
+
+.form-button {
+  border:none;
+  outline: none;
+  background-color: #38e790;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
