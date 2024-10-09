@@ -10,14 +10,16 @@ function TestPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-
-  async function fetchApi() {
+  async function fetchApi(param) {
     try {
       setLoading(true);
-      const fetchData = await axios.get(url);
+      console.log(param)
+
+      const fetchData = await axios.get(url, {
+        params: { id: param }
+      });
       console.log(fetchData.data);
-    }
-    catch (ex) {
+    } catch (ex) {
       console.error(ex.message)
       setError(ex.message);
     } finally {
@@ -25,13 +27,17 @@ function TestPage() {
     }
   }
 
-
   return (
     <main className={"test-page"}>
       <Button
         buttonText={"test API"}
         className={"default-variant"}
         onClick={() => fetchApi()}
+      />
+      <Button
+        buttonText={"POST 6"}
+        className={"default-variant"}
+        onClick={() => fetchApi(6)}
       />
     </main>
   )

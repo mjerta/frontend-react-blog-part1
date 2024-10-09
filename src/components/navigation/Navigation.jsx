@@ -42,6 +42,8 @@ function Navigation({img}) {
                 onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
                 className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
                 to="/newpost">Nieuwe post maken</NavLink>
+            </li>
+            <li>
               <NavLink
                 onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
                 className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
