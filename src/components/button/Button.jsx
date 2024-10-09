@@ -1,6 +1,13 @@
-function Button({type, buttonText, className}) {
+import "./Button.css"
+
+function Button({type, buttonText, className, onClick}) {
   return (
-      <button className={className} type={type}>{buttonText}</button>
+    <button
+      className={className}
+      onClick={onClick}
+      type={type}>
+      {buttonText}
+    </button>
   )
 }
 

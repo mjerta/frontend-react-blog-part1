@@ -7,6 +7,7 @@ import OverView from "./pages/overview/OverView.jsx";
 import Navigation from "./components/navigation/Navigation.jsx";
 import logoNavbar from "./assets/logo-medium.png";
 import Post from "./pages/post/Post.jsx";
+import TestPage from "./pages/testpage/TestPage.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path={"/newpost"} element={<NewPost/>}/>
           <Route path={"/overview"} element={<OverView/>}/>
           <Route path={"/posts/:id"} element={<Post/>}/>
+          <Route path={"/test-page"} element={<TestPage/>}/>
           <Route path={"*"} element={<NotFound/>}/>
         </Routes>
       </div>

@@ -27,19 +27,28 @@ function Navigation({img}) {
               <NavLink
                 onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
                 className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
-                to="/">Home</NavLink>
+                to="/">Home
+              </NavLink>
             </li>
             <li>
               <NavLink
                 onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
                 className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
-                to="/overview">Alle Post</NavLink>
+                to="/overview">Alle Post
+              </NavLink>
             </li>
             <li>
               <NavLink
                 onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
                 className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
                 to="/newpost">Nieuwe post maken</NavLink>
+            </li>
+            <li>
+              <NavLink
+                onClick={() => isOpen === "show-menu" ? setIsOpen("") : setIsOpen("show-menu")}
+                className={({isActive}) => isActive ? "active-menu-link" : "default-menu-link"}
+                to="/test-page">test page
+              </NavLink>
             </li>
           </ul>
         </div>
